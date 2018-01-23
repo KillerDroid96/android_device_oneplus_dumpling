@@ -37,9 +37,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # OTA Config
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.ota.romname=<DirtyUnicorns> \
-        ro.ota.version=$(shell date +"%Y%m%d") \
-        ro.ota.manifest=https://raw.githubusercontent.com/KillerDroid96/OTA/o8x/devices.xml
+        rr.ota.version= $(shell date +%Y%m%d) 
+        
 # OTA App
 PRODUCT_PACKAGES += \
 ResurrectionOTA
