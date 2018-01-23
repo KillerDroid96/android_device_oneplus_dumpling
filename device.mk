@@ -35,6 +35,15 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
+# OTA Config
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.ota.romname=<DirtyUnicorns> \
+        ro.ota.version=$(shell date +"%Y%m%d") \
+        ro.ota.manifest=https://raw.githubusercontent.com/KillerDroid96/OTA/o8x/devices.xml
+# OTA App
+PRODUCT_PACKAGES += \
+ResurrectionOTA
+
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=16m \
