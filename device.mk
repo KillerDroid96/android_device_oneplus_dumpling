@@ -37,7 +37,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # OTA Config
 PRODUCT_PROPERTY_OVERRIDES += \
-        rr.ota.version= $(shell date +%Y%m%d) 
+        rr.ota.version=$(shell date +%Y%m%d) 
         
 # OTA App
 PRODUCT_PACKAGES += \
